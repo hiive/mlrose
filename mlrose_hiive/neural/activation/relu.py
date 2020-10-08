@@ -33,5 +33,6 @@ def relu(x, deriv=False):
 
     if deriv:
         fx[np.where(fx > 0)] = 1
+        fx[np.where(fx <= 0)] = 0
 
     return fx
