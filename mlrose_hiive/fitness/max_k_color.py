@@ -81,9 +81,9 @@ class MaxKColor:
         edges = self.edges if self.graph_edges is None else self.graph_edges
 
         if self.maximize:
-            fitness = sum(int(state[n1] == state[n2]) for (n1, n2) in edges)
-        else:
             fitness = sum(int(state[n1] != state[n2]) for (n1, n2) in edges)
+        else:
+            fitness = sum(int(state[n1] == state[n2]) for (n1, n2) in edges)
         """
         if fitness == 0:
             for i in range(len(edges)):
