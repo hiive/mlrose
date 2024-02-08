@@ -25,7 +25,7 @@ Example usage:
 class MIMICRunner(_RunnerBase):
 
     def __init__(self, problem, experiment_name, seed, iteration_list, population_sizes,
-                 keep_percent_list, max_attempts=500, generate_curves=True, use_fast_mimic=False, **kwargs):
+                 keep_percent_list, max_attempts=5, generate_curves=True, use_fast_mimic=True, **kwargs):
         super().__init__(problem=problem, experiment_name=experiment_name, seed=seed, iteration_list=iteration_list,
                          max_attempts=max_attempts, generate_curves=generate_curves,
                          **kwargs)
