@@ -89,7 +89,7 @@ def random_hill_climb(problem, max_attempts=10, max_iters=np.inf, restarts=0,
     all_curves = []
 
     continue_iterating = True
-    # problem.reset()
+    problem.reset()
     for current_restart in range(restarts + 1):
         # Initialize optimization problem and attempts counter
         fevals = problem.fitness_evaluations
