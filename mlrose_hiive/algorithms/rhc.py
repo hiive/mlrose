@@ -165,6 +165,11 @@ def random_hill_climb(problem, max_attempts=10, max_iters=np.inf, restarts=0,
         # break out if we can stop
         if problem.can_stop():
             break
+
+        # break out if requested
+        if not continue_iterating:
+            break
+
     best_fitness *= problem.get_maximize()
 
     return best_state, best_fitness, np.asarray(best_fitness_curve) if curve else None
